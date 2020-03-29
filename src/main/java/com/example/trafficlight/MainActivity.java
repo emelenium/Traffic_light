@@ -25,7 +25,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 while (start_stop) {
-
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
                 }
 

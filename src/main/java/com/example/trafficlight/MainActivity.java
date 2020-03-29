@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
     private LinearLayout b_1, b_2, b_3;
-    private boolean start_stop;
+    private boolean start_stop=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 //        b_1.setBackgroundColor(Color.RED);
+
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        start_stop = false;
+    }
+
+
 }
